@@ -1,0 +1,130 @@
+#experience{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.experience_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.experience_container > div {
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.experience_container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.experience_container > div h3 {
+    text-align: center;
+    margin-bottom: 4.5 rem;
+    color: var(--color-primary);
+}
+
+.experience_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    gap: 2rem;
+}
+
+.experience_details{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.experience_details-icon {
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
+.skills__labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .skills__labels button {
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: black;
+  }
+
+.skills__container {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+  .skills__container span {
+    background:  linear-gradient(to bottom right, var(--color-bg-variant), #048295);
+    border-radius: 50%;
+    box-shadow: 5px 3px 10px black;
+    height: 100px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    padding-top: 35%;
+  }
+  .skills__container span:hover {
+    border: 2px solid var(--color-primary-variant);
+    background: transparent;
+}
+
+/* ********************* MEDIA QUERIES (MEDIUM) ********************* */
+@media screen and (max-width: 1024px) {
+    .experience_container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience_container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+    .experience_content {
+        margin-left: 5rem;
+    }
+    .skills__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .skills__labels {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        gap: 1rem;
+    }
+    .skills__labels button {
+        margin: 0;
+        width: 15rem;
+    }
+}
+
+/* ********************* MEDIA QUERIES (SMALL) ********************* */
+@media screen and (max-width: 600px) {
+    .experience_container {
+        gap: 1rem;
+    }
+
+    .experience_container > div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .experience_content {
+        margin-left: 2.8rem;
+    }
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

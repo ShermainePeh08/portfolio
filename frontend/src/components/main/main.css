@@ -1,0 +1,91 @@
+main {
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+main img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    position: relative;
+    top: -5rem;
+    left: 25%;
+    z-index: -1;
+}
+
+.main_container {
+    text-align: center;
+    position: relative;
+}
+
+
+.main_container h1{
+    text-align: center;
+    position: relative;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: beige;
+    font-style: italic;
+}
+
+/* ********************* CTA ********************* */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.3rem;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* ********************* MEDIA QUERIES (MEDIUM) ********************* */
+@media screen and (max-width: 1024px) {
+    main {
+        padding-bottom: 6rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+        height: max-content;
+    }
+
+    main img {
+        top: 0;
+        width: 80%;
+        height: 80%;
+        left: 10%;
+    }
+
+    .main_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 50%;
+        text-align: center;
+        row-gap: 8rem;
+    }
+
+    .cta{
+        display: none;
+    }
+}
+
+
+/* ********************* MEDIA QUERIES (SMALL) ********************* */
+@media screen and (max-width: 600px) {
+    main {
+        padding-bottom: 6rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+        height: max-content;
+    }
+
+    .main_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 50%;
+        text-align: center;
+        row-gap: 8rem;
+    }
+
+    .cta{
+        display: none;
+    }
+}
