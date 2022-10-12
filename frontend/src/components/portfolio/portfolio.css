@@ -1,12 +1,31 @@
 
-.portfolio_container {
+.portfolio_container2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     padding: 2rem 10rem;
 }
 
-.portfolio_item {
+.portfolio_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 2rem 10rem;
+    padding-top: 0;
+}
+
+.portfolio_item-image{
+    height: 15rem;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+}
+
+.portfolio_item-image img {
+    border-radius: .8rem;
+    box-shadow: 5px 3px 70px black;
+}
+
+.portfolio_item2 {
     background: var(--color-bg-variant);
     padding: 1.2rem;
     border-radius: 2rem;
@@ -15,25 +34,43 @@
     box-shadow: 5px 3px 10px black;
 }
 
-.portfolio_item h3{
+.portfolio_item {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transparent);
+}
+
+.portfolio_item h3, .portfolio_item2 h3 {
     font-weight: bold;
 }
 
-.portfolio_item p{
+.portfolio_item p, .portfolio_item2 p{
     font-size: 1rem;
-    color: var(--color-light);
     margin-bottom: 1rem;
 }
 
-.portfolio_item:hover {
+.portfolio_item2 h5, .portfolio_item h5{
+    font-size: 1rem;
+    color: var(--color-light);
+    margin-bottom: .5rem;
+}
+
+.portfolio_item2:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
 }
 
+.portfolio_item:hover {
+    border-color: var(--color-primary-variant);
+    transform: scale(1.12)
+}
+/* 
 .portfolio_item-image {
     overflow: hidden;
     height: 12rem;
-}
+} */
 
 .portfolio_item-cta {
     display: flex;
@@ -55,10 +92,11 @@
 .additional_work {
     align-items: center;
 }
-#portfolio {
+#portfolio, #tport {
     padding: 2rem 0;
     display: grid;
     place-items: center;
+    padding-top: 0;
 }
 .portfolio__labels {
     display: flex;
@@ -76,7 +114,7 @@
 
 /* ********************* MEDIA QUERIES (MEDIUM) ********************* */
 @media screen and (max-width: 1024px) {
-    .portfolio_container {
+    .portfolio_container2, .portfolio_container {
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
         padding: 2rem;
@@ -92,16 +130,16 @@
         margin: 0;
         width: 15rem;
     }
-    .portfolio_item {
+    .portfolio_item2, .portfolio_item {
         width: 20rem;
-        height: 15rem;
+        height: max-content;
     }
 }
 
 
 /* ********************* MEDIA QUERIES (SMALL) ********************* */
 @media screen and (max-width: 600px) {
-    .portfolio_container {
+    .portfolio_container2, .portfolio_container {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem;

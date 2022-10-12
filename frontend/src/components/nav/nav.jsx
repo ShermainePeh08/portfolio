@@ -12,6 +12,7 @@ import {BsFillMoonFill} from 'react-icons/bs'
 import { useState, useEffect } from "react";
 
 const Nav = () => {
+  const [activeNav, setActiveNav] = useState('#')
   return (
     <header>
         <div class="navbrand">
@@ -26,7 +27,7 @@ const Nav = () => {
               <a href="#experience" class="nav__link">Skills</a>
             </li>
             <li class="nav__li">
-              <a href="#portfolio" class="nav__link">Projects</a>
+              <a href="#proj" class="nav__link">Projects</a>
             </li>
             <li class="nav__li">
               <a href="#contact" class="nav__link">Contact</a>
@@ -38,8 +39,15 @@ const Nav = () => {
           <a href = "https://www.linkedin.com/in/pehshermaine0704/" target = "_blank"><FaLinkedin /></a>
           <a href = "https://github.com/ShermainePeh08" target = "_blank"><FaGithub /></a>
           {/* <button class="change-theme-btn light" id="changeThemeBtn"><BsFillMoonFill/></button> */}
-          <button class="menu__btn" id="menuBtn"><BiMenuAltRight/></button>
+          {/* <button class="menu__btn" id="menuBtn"><BiMenuAltRight/></button> */}
         </div>
+        <nav class="menu">
+          <a href ="#" onClick={() => setActiveNav('#')} className= {activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
+          <a href ="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser/></a>
+          <a href ="#experience" onClick={() => setActiveNav('#experience')} className= {activeNav === '#experience' ? 'active' : ''}><FiBookOpen/></a>
+          <a href ="#portfolio" onClick={() => setActiveNav('#portfolio')} className= {activeNav === '#portfolio' ? 'active' : ''}><GoFileSubmodule/></a>
+          <a href ="#contact" onClick={() => setActiveNav('#contact')} className= {activeNav === '#contact' ? 'active' : ''}><MdOutlineMessage/></a>
+        </nav>
       </header>
   )
 }

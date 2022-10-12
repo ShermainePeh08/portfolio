@@ -119,12 +119,18 @@
     .experience_container > div {
         width: 100%;
         padding: 2rem 1rem;
+        padding-bottom: 0;
     }
 
     .experience_content {
         margin-left: 2.8rem;
     }
     .skills__container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
+    .skills__container span {
+        height: 80px;
+        width: 80px;
+        font-size: .8rem;
+      }
 }
