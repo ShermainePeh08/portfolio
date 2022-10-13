@@ -67,7 +67,8 @@
     margin-top: 3rem;
   }
   .skills__container span {
-    background:  linear-gradient(to bottom right, var(--color-bg-variant), #048295);
+    /* background:  linear-gradient(to bottom right, #672C6C, #35DCF5); */
+    background: #066b7a;
     border-radius: 50%;
     box-shadow: 5px 3px 10px black;
     height: 100px;

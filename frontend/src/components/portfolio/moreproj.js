@@ -2,15 +2,6 @@ import pred from '../../assests/Healthcarep.pdf';
 import tss from '../../assests/TheSteppingStone.pdf';
 export const mProjects = [
   {
-    name: "JavaScript Hangman Game",
-    description: "Hangman Game built with JavaScript, containing hints, multiple categories and levels, and a leaderboard.",
-    // addition: "Game is deployed and playable.",
-    category: ["all","web development"],
-    github: "https://github.com/ShermainePeh08/JSHangman#readme",
-    link: "https://shermainepeh08.github.io/JSHangman/",
-    // img: "",
-  },
-  {
     name: "The Stepping Stone",
     description: "Analysis on Asean's Decent Work and Economic Growth, focused on Youth Unemployment and SMART Economy.",
     // addition: "PDF Version available.",
@@ -48,7 +39,7 @@ export const mProjects = [
   },
   {
     name: "Discord Bot",
-    description: "Built a discord bot for a workshop, which includes API, Lists and reply functions. Also deployed live on Heroku.",
+    description: "Discord bot built with API, Commands, Lists and Reply functions. Also deployed live on Heroku.",
     addition: "**There is currently no shareable version.",
     category: ["all", "data/ai"],
     github: "https://github.com/ShermainePeh08/DiscordMessageBot",

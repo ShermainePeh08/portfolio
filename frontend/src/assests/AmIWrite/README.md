@@ -3,7 +3,7 @@
 - Built locally with self-trained AI then converted to Tensorflow Lite and incorporated into Kotlin. 
 - Currently still developing in partnership with Society Against Family Violence (SAFV). 
 
-![App Demo](amiwrite.gif)</br>
+<img src="amiwrite.gif" height="450"/><br>
 
 ## Functions 
 - A journal app where users can write journal about anything and even upload images. 
