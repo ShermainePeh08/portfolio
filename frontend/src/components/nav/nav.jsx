@@ -12,13 +12,13 @@ import {BsFillMoonFill} from 'react-icons/bs'
 import { useState, useEffect } from "react";
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState('#')
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     <header>
         <div class="navbrand">
           <a href="">Shermaine</a>
         </div>
-        <nav class="nav">
+        <nav class={isNavExpanded ? "nav expanded" : "nav"}>
           <ul class="nav__ul">
             <li class="nav__li">
               <a href="#about" class="nav__link">About</a>
@@ -39,15 +39,16 @@ const Nav = () => {
           <a href = "https://www.linkedin.com/in/pehshermaine0704/" target = "_blank"><FaLinkedin /></a>
           <a href = "https://github.com/ShermainePeh08" target = "_blank"><FaGithub /></a>
           {/* <button class="change-theme-btn light" id="changeThemeBtn"><BsFillMoonFill/></button> */}
-          {/* <button class="menu__btn" id="menuBtn"><BiMenuAltRight/></button> */}
         </div>
-        <nav class="menu">
+        <button class="menu__btn" onClick={() => { setIsNavExpanded(!isNavExpanded);}}><BiMenuAltRight/></button>
+        {/* <div className={isNavExpanded ? "nav expanded" : "nav"}></div> */}
+        {/* <nav class="menu">
           <a href ="#" onClick={() => setActiveNav('#')} className= {activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
           <a href ="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser/></a>
           <a href ="#experience" onClick={() => setActiveNav('#experience')} className= {activeNav === '#experience' ? 'active' : ''}><FiBookOpen/></a>
           <a href ="#portfolio" onClick={() => setActiveNav('#portfolio')} className= {activeNav === '#portfolio' ? 'active' : ''}><GoFileSubmodule/></a>
           <a href ="#contact" onClick={() => setActiveNav('#contact')} className= {activeNav === '#contact' ? 'active' : ''}><MdOutlineMessage/></a>
-        </nav>
+        </nav> */}
       </header>
   )
 }
